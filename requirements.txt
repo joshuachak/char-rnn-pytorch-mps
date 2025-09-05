@@ -1,0 +1,24 @@
+# Core dependencies
+torch>=2.0.0
+numpy>=1.21.0
+PyYAML>=6.0
+
+# Data processing and utilities
+matplotlib>=3.5.0
+tqdm>=4.64.0
+
+# Logging and monitoring
+tensorboard>=2.10.0
+
+# CLI and configuration
+click>=8.0.0
+rich>=12.0.0
+
+# Development and testing
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
+
+# Optional: For notebook support
+jupyter>=1.0.0
+ipywidgets>=7.6.0

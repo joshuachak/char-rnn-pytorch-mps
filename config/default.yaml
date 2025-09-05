@@ -1,0 +1,41 @@
+# Default configuration for char-rnn-pytorch
+
+model:
+  type: "lstm"  # lstm, gru, rnn
+  hidden_size: 128
+  num_layers: 2
+  dropout: 0.2
+
+training:
+  batch_size: 50
+  seq_length: 50
+  learning_rate: 0.002
+  weight_decay: 0.00001
+  max_epochs: 50
+  grad_clip: 5.0
+  eval_interval: 1000
+  save_interval: 1000
+
+data:
+  data_dir: "data/tinyshakespeare"
+  train_frac: 0.9
+  val_frac: 0.05
+  num_workers: 4
+
+generation:
+  temperature: 1.0
+  top_k: null
+  top_p: 0.9
+  length: 1000
+  prime_text: ""
+
+logging:
+  log_dir: "logs"
+  checkpoint_dir: "checkpoints"
+  log_interval: 100
+  enable_tensorboard: true
+
+device:
+  auto_detect: true
+  preferred: "mps"  # mps, cuda, cpu
+  mixed_precision: false  # Enable when supported on MPS
